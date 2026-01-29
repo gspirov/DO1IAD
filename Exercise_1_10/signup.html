@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aston Fitness</title>
+        <link rel="stylesheet" href="css/signup.css">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    </head>
+    <body>
+        <header id="main-header">
+            <h1>Aston Fitness</h1>
+
+            <form id="login-form">
+                <label for="login-email">Email: </label>
+                <input type="email" name="email" id="login-email">
+
+                <label for="login-password">Password: </label>
+                <input type="password" name="password" id="login-password">
+
+                <input type="submit" name="sign_in" value="Sign In">
+            </form>
+        </header>
+
+        <section>
+            <p>Exercise Smarter. Not Harder.</p>
+            <a href="index.html">Home</a>
+        </section>
+
+        <section>
+            <h2>Sign Up</h2>
+
+            <form id="signup-form">
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                    <p id="email_error"></p>
+                </div>
+
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>
+                    <p id="password_error"></p>
+                </div>
+
+                <fieldset>
+                    <legend>Choose your subscription plan:</legend>
+
+                    <label for="basic">Basic</label>
+                    <input type="radio" name="subscription_plan" id="basic" value="basic" required>
+
+                    <label for="premium">Premium</label>
+                    <input type="radio" name="subscription_plan" id="premium" value="premium">
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Additional activities:</legend>
+
+                    <label for="swimming">Swimming</label>
+                    <input type="checkbox" name="additional_activities[]" id="swimming" value="swimming">
+
+                    <label for="yoga">Yoga</label>
+                    <input type="checkbox" name="additional_activities[]" id="yoga" value="yoga">
+
+                    <label for="squash">Squash</label>
+                    <input type="checkbox" name="additional_activities[]" id="squash" value="squash">
+                </fieldset>
+
+                <br>
+
+                <div>
+                    <label for="fitness_goal">Fitness goals:</label>
+
+                    <input list="fitness_goals"
+                           id="fitness_goal"
+                           name="fitness_goal"
+                           placeholder="Search goal..."
+                           required
+                    >
+
+                    <datalist id="fitness_goals">
+                        <option value="Weight Loss">
+                        <option value="Strength Build">
+                        <option value="Bulk">
+                        <option value="Agility">
+                        <option value="Flexibility">
+                    </datalist>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="additional_comments">Additional comments: </label>
+                    <textarea name="additional_comments" id="additional_comments" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <label for="start_date">Start Date: </label>
+                    <input type="date" name="start_date" id="start_date" required>
+                </div>
+
+                <input type="submit" name="signup" value="Sign Up">
+            </form>
+        </section>
+
+        <script src="js/login.js"></script>
+        <script src="js/signup.js"></script>
+    </body>
+</html>
