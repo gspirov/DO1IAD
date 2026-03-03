@@ -1,0 +1,33 @@
+#contact-form {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 32px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+input,
+select,
+textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    background: #fff;
+}
+
+.btn-submit {
+    width: 100%;
+}

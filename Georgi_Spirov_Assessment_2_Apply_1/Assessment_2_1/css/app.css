@@ -1,0 +1,164 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    background: #f6f7fb;
+    color: #111;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+section {
+    margin: 64px 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(246,247,251,0.9);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #f0f0f0;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background: #000;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0 0 16px;
+}
+
+.hero-sub-text {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+p {
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #2563eb;
+    border-color: #2563eb;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    padding: 32px 0;
+    color: #666;
+    text-align: center;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 14px;
+    border-radius: 14px;
+    border:1px solid #e5e7eb;
+    background:#fff;
+
+    text-decoration: none;
+    color: #111;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .main-header {
+        flex-direction: column;
+    }
+
+    #nav-main {
+        display: none;
+        width: 100%;
+    }
+
+    #nav-main.open {
+        display: block;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #nav-toggle {
+        display: block;
+        width: 100%;
+    }
+}

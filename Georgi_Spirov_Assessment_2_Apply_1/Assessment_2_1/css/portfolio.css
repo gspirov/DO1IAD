@@ -1,0 +1,37 @@
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#projects {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.portfolio-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 2rem;
+    border: 1px solid #ccc;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}

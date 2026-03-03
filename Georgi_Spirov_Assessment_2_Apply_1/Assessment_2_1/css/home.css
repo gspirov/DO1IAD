@@ -1,0 +1,100 @@
+.actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.work-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tech-skill {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    height: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.tech-skill svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.skills {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.skill {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+#testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#testimonials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial {
+    display: block;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.testimonial blockquote {
+    font-weight: bold;
+}
+
+.lets-work .links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-work .links .link {
+    flex: 0;
+}
+
+.lets-work .links .link img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-sub-text {
+        font-size: 18px;
+        display: block;
+    }
+
+    #testimonials {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+}

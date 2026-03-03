@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="./css/portfolio.css">
+    </head>
+    <body>
+        <header>
+            <div class="container main-header">
+                <h2>Georgi Spirov</h2>
+
+                <button id="nav-toggle"
+                        aria-controls="nav-main"
+                        aria-expanded="false"
+                        type="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+
+                <nav id="nav-main">
+                    <ul class="nav">
+                        <li>
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section id="portfolio">
+                <h2 class="center">My Projects</h2>
+
+                <div id="projects">
+                    <div class="portfolio-project">
+                        <p>Project 1: Responsive Landing Page</p>
+                        <img src="https://img.freepik.com/free-photo/website-development-concept-with-laptop_23-2149428035.jpg" alt="Responsive landing page preview" class="project-image">
+                        <p>Modern responsive landing page built with HTML, CSS and JavaScript. Includes mobile-first layout, smooth scrolling navigation, reusable components and basic performance optimizations.</p>
+                    </div>
+
+                    <div class="portfolio-project">
+                        <p>Project 2: React Portfolio Dashboard</p>
+                        <img src="https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg" alt="React dashboard preview" class="project-image">
+                        <p>Single-page app in React with routing, reusable UI components and state management. Features projects list, filters by tech stack, dark mode and contact form with validation.</p>
+                    </div>
+
+                    <div class="portfolio-project">
+                        <p>Project 3: REST API (Node.js + Express)</p>
+                        <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="REST API preview" class="project-image">
+                        <p>RESTful API built with Node.js and Express. CRUD endpoints, JWT authentication, request validation, error handling middleware and Swagger/OpenAPI documentation.</p>
+                    </div>
+
+                    <div class="portfolio-project">
+                        <p>Project 4: E-commerce Product Page</p>
+                        <img src="https://img.freepik.com/free-photo/online-shopping-concept_23-2148527765.jpg" alt="E-commerce page preview" class="project-image">
+                        <p>Interactive e-commerce product page with gallery, variants, cart logic and local storage persistence. Focus on UX, accessibility and clean component structure.</p>
+                    </div>
+
+                    <div class="portfolio-project">
+                        <p>Project 5: Admin Panel (CRUD + Tables)</p>
+                        <img src="https://img.freepik.com/free-photo/data-analysis-business-analytics_53876-120468.jpg" alt="Admin panel preview" class="project-image" class="project-image">
+                        <p>Admin panel with searchable tables, sorting, pagination and CRUD forms. Role-based access concept, responsive layout and reusable form components.</p>
+                    </div>
+
+                    <div class="portfolio-project">
+                        <p>Project 6: Full-Stack Blog (Auth + CMS-lite)</p>
+                        <img src="https://img.freepik.com/free-photo/blogging-concept-with-laptop_23-2147883676.jpg" alt="Full-stack blog preview" class="project-image">
+                        <p>Full-stack blog with user authentication, posts editor, comments and profiles. Backend with API + database, frontend with SSR/SPA approach, and deployment-ready configuration.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script defer src="./js/app.js"></script>
+
+        <footer>
+            <div class="container footer-contact">
+                <a class="contact-link" href="tel:359894349433">
+                    <span class="icon" aria-hidden="true">📞</span>
+                    <span class="text">
+                        <span class="value">(+359)89 43 49 433</span>
+                    </span>
+                </a>
+
+                <a class="contact-link" href="mailto:250400247@aston.ac.uk">
+                    <span class="icon" aria-hidden="true">✉️</span>
+                    <span class="text">
+                        <span class="value">250400247@aston.ac.uk</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="container">
+                Copyrights 2026. All Rights are Reserved.
+            </div>
+        </footer>
+    </body>
+</html>
