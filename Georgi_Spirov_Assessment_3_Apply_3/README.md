@@ -23,8 +23,8 @@ Ensure the following are installed:
 Clone the repository and install dependencies:
 
 ```bash
-git clone <your-repository-url>
-cd <project-folder>
+git clone https://github.com/gspirov/DO1IAD.git
+cd Georgi_Spirov_Assessment_3_Apply_3
 composer install
 npm install
 ```
