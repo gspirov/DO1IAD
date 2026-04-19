@@ -1,0 +1,23 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Adjusting the height of the profile sidebar for larger screen sizes */
+@media (min-width: 768px) {
+    .profile-sidebar {
+        min-height: calc(100vh - 120px);
+    }
+}
+
+/* Customizing carousel controls to improve usability by adjusting their position and width */
+#lightboxCarousel .carousel-control-prev,
+#lightboxCarousel .carousel-control-next {
+    width: auto;
+}
+
+#lightboxCarousel .carousel-control-prev {
+    left: -70px;
+}
+
+#lightboxCarousel .carousel-control-next {
+    right: -70px;
+}
