@@ -12,7 +12,7 @@ Ensure the following are installed:
 
 - PHP 8.4
 - Composer
-- Node.js and npm
+- Node.js (^22) and npm
 - MySQL
 - Git
 
@@ -57,7 +57,7 @@ This separation improves security by preventing the application from executing s
 Run the provided SQL script:
 
 ```sql
-create-db.sql
+mysql -u root -p < create-db.sql
 ```
 
 **Important:**  
@@ -128,6 +128,30 @@ npm run build
 
 ---
 
+## Writable Directories
+
+Before running the application, ensure Laravel's writable directories exist and have the correct permissions.
+
+## Linux / macOS
+
+```bash
+mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs
+chown -R $(whoami):$(id -gn) storage bootstrap/cache
+chmod -R 775 storage bootstrap/cache
+```
+
+## Windows
+
+```bash
+mkdir storage\framework\cache\data
+mkdir storage\framework\sessions
+mkdir storage\framework\views
+mkdir storage\logs
+type nul > storage\logs\laravel.log
+```
+
+---
+
 ## Running the Application
 
 Start Laravel’s built-in development server:
@@ -149,9 +173,9 @@ http://127.0.0.1:7777
 ```bash
 composer install
 npm install
-cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed --database=mysql_admin
+php artisan storage:link
 npm run dev
 php artisan serve --port=7777
 ```
