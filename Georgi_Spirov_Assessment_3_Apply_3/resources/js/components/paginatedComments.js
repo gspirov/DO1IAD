@@ -89,13 +89,13 @@ export default (config = {}) => ({
 
             // Parse the data and append the new comments.
             const data = await response.json();
-            this.comments.push(...data);
+            this.comments.push(...data.comments);
 
             // Add the IDs of the new comments to the deletable list.
-            data.map(comment => this.ableToDeleteCommentIds.push(comment.id));
+            this.ableToDeleteCommentIds.push(...data.ableToDeleteCommentsIds);
 
             // Update the offset based on the number of fetched comments.
-            this.offset += data.length;
+            this.offset += data.comments.length;
         } catch (error) {
             console.error(error);
         } finally {

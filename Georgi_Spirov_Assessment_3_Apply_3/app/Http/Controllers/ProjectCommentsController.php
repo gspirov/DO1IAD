@@ -53,7 +53,7 @@ class ProjectCommentsController extends Controller
     /**
      * Delete a specific comment from a project.
      */
-    public function delete(ProjectComment $comment)
+    public function delete(ProjectComment $comment): JsonResponse
     {
         if (!Gate::allows('deleteComment', [$comment->project, $comment])) {
             abort(403);

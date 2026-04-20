@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -51,13 +52,16 @@ class ProjectsController
 
         $comments = $this->createCommentsCollection($project, $request->query('offset', 0));
 
-        return response()->json($this->mapCommentModels($comments));
+        return response()->json([
+            'comments' => $this->mapCommentModels($comments),
+            'ableToDeleteCommentsIds' => $this->getAbleToDeleteCommentsIds($comments, $project)
+        ]);
     }
 
     /**
      * Fetch a paginated collection of comments for a given project.
      */
-    private function createCommentsCollection(Project $project, int $offset)
+    private function createCommentsCollection(Project $project, int $offset): Collection
     {
         return $project->comments()
                        ->with(['user:id,username', 'project'])
