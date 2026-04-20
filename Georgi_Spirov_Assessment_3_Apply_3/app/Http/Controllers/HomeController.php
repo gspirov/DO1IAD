@@ -24,9 +24,9 @@ class HomeController extends Controller
         // The query also calculates average ratings and counts the number of users
         // who have marked each project as a favorite.
         $projects = Project::query()
-                           ->with(['user', 'images'])
+                           ->with(['user', 'images', 'comments'])
                            ->withAvg('ratings', 'rating')
-                           ->withCount('favouriteByUsers')
+                           ->withCount('favouriteByUsers', 'comments')
                            // Apply a filter for the 'title' field if the parameter is present.
                            ->when($request->filled('title'), function (Builder $query) use ($request) {
                                $query->where(
